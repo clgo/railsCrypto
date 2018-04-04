@@ -1,0 +1,12 @@
+<h1>First Ruby Page</h1>
+<p>This is my first ruby page</p>
+<BR /><BR />
+<% @coins %>
+
+<% for x in @coins %>
+    <% for coin in @my_coins %>
+        <% if coin == x["symbol"] %>
+            <%= x["name"] %>: $<%= x["price_usd"] %><BR />
+        <% end %>
+    <% end %>
+<% end %>

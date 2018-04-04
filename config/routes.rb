@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  devise_for :users
+  get 'home/about'
+  get 'home/lookup'
+  # first 'home/lookup' is where we want to post the form & 'home/lookup' after => is where we want to go after post
+  post 'home/lookup' => 'home/lookup' 
+  root 'home#index' # root page needs a #
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
