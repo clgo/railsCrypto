@@ -13,7 +13,7 @@
             <% if @symbol %>
                 <% for x in @coins %>
                     <% if @symbol.upcase == x["symbol"] %>
-                        <%= x["name"] %>: $<%= x["price_usd"] %><BR />
+                        <%= x["name"] %>: USD $<%= x["price_usd"] %><BR />
                         Rank: <%= x["rank"] %>
                     <% end %>
                 <% end %>

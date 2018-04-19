@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :portfolios
+  resources :cryptos
   devise_for :users
   get 'home/about'
   get 'home/lookup'
